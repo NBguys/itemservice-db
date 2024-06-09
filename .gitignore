@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### intellj빌드로 생성된 Q파일을 커밋 대상에서 제외 ###
+/src/main/generated
