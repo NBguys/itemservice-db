@@ -14,15 +14,11 @@ public class TestDataInit {
 
     private final ItemRepository itemRepository;
 
-    @EventListener(ApplicationReadyEvent.class)
-    @Transactional
-    public void initDB(){
-        initData();
-    }
-
     /**
      * 확인용 초기 데이터 추가
      */
+    @EventListener(ApplicationReadyEvent.class)
+    @Transactional
     public void initData() {
         log.info("test data init");
         itemRepository.save(new Item("itemA", 10000, 10));
