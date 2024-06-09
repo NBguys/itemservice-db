@@ -12,6 +12,7 @@ import hello.itemservice.repository.ItemUpdateDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.persistence.EntityManager;
@@ -22,7 +23,7 @@ import static hello.itemservice.domain.QItem.*;
 
 @Repository
 @RequiredArgsConstructor
-@Slf4j
+@Transactional
 public class JpaItemRepositoryV3 implements ItemRepository {
 
     private final EntityManager em;
